@@ -2,6 +2,49 @@ syntax = "proto3";
 
 package protocol;
 
-message Message {
+// Client to server
+message Request {
+    uint32 id = 1;
+    RequestType type = 2;
+    bytes image = 8;
+    Camera camera = 9;
+}
+enum RequestType {
+    Info = 0;
+    Locate = 1;
+    Fill = 2;
+}
 
+// Server to client
+message Update {
+    uint32 id = 1;
+}
+
+
+message Camera {
+    Location location = 1;
+}
+
+message Point {
+    uint32 id = 1;
+    Location location = 2;
+    Color color = 3;
+}
+
+message Polygon {
+    uint32 a = 1;
+    uint32 b = 2;
+    uint32 c = 3;
+}
+
+message Location {
+    double latitude  = 1;
+    double longitude = 2;
+    double height    = 3;
+}
+
+message Color {
+    float red = 1;
+    float green = 2;
+    float blue = 3;
 }
