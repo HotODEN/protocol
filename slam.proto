@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package slam;
+
+import "data.proto";
+
+message TrackRequest {
+    JPEGFrame frame = 1;
+}
+
+message TrackResult {
+    Camera camera = 1;
+}

@@ -1,23 +1,7 @@
 syntax = "proto3";
 
-package protocol;
-
-// Client to server
-message Request {
-    uint32 id = 1;
-    RequestType type = 2;
-    bytes image = 8;
-    Camera camera = 9;
-}
-enum RequestType {
-    Info = 0;
-    Locate = 1;
-    Fill = 2;
-}
-
-// Server to client
-message Update {
-    uint32 id = 1;
+message JPEGFrame {
+    bytes data = 1;
 }
 
 
