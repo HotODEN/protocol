@@ -9,6 +9,10 @@ message Camera {
     Location location = 1;
 }
 
+message MeshUpdate {
+
+}
+
 message Point {
     uint32 id = 1;
     Location location = 2;

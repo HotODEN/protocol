@@ -5,7 +5,8 @@ package slam;
 import "data.proto";
 
 message TrackRequest {
-    JPEGFrame frame = 1;
+    uint32 id = 1;
+    JPEGFrame frame = 2;
 }
 
 message TrackResult {

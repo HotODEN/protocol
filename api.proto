@@ -6,29 +6,24 @@ import "data.proto";
 
 service API {
     rpc GetInfo(Client) returns (Info) {}
-    rpc Locate(Client) returns (Location) {}
-    rpc Fill(Client) returns (Location) {}
+    rpc Track(stream Request) returns (stream Update) {}
 }
 
 message Client {
-
 }
 
 message Info {
     string version = 1;
 }
 
-// Client to server
 message Request {
-    uint32 id = 1;
-    bytes image = 8;
-    Camera camera = 9;
+    uint64 userId = 1;
+    optional Camera camera = 2;
+    optional JPEGFrame frame = 3;
 }
 
 
-// Server to client
 message Update {
-    uint32 id = 1;
 }
 
 

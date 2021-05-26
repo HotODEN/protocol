@@ -1,7 +1,7 @@
-INCLUDE(FindProtobuf)
-FIND_PACKAGE(Protobuf REQUIRED)
-INCLUDE_DIRECTORIES(${PROTOBUF_INCLUDE_DIR})
+include(FindProtobuf)
+find_package(Protobuf REQUIRED)
+include_directories(${PROTOBUF_INCLUDE_DIR})
 file(GLOB ProtoFiles "${CMAKE_CURRENT_SOURCE_DIR}/*.proto")
-PROTOBUF_GENERATE_CPP(PROTO_SRC PROTO_HEADER ${ProtoFiles})
-ADD_LIBRARY(protocol ${PROTO_HEADER} ${PROTO_SRC})
+protobuf_generate_cpp(PROTO_SRC PROTO_HEADER ${ProtoFiles})
+add_library(protocol ${PROTO_HEADER} ${PROTO_SRC})
 
