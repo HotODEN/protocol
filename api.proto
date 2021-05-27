@@ -19,7 +19,7 @@ message Info {
 message Request {
     uint64 userId = 1;
     optional Camera camera = 2;
-    optional JPEGFrame frame = 3;
+    optional PNGFrame frame = 3;
 }
 
 

@@ -1,8 +1,17 @@
 syntax = "proto3";
 
+import "google/protobuf/timestamp.proto";
+
 message JPEGFrame {
-    bytes data = 1;
+    google.protobuf.Timestamp timestamp = 1;
+    bytes data = 2;
 }
+
+message PNGFrame {
+    google.protobuf.Timestamp timestamp = 1;
+    bytes data = 2;
+}
+
 
 
 message Camera {
