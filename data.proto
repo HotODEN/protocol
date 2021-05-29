@@ -12,6 +12,12 @@ message PNGFrame {
     bytes data = 2;
 }
 
+enum TrackingState {
+    NO_IMAGES_YET = 0;
+    NOT_INITIALIZED = 1;
+    OK = 2;
+    LOST = 3;
+}
 
 
 message Camera {
@@ -32,6 +38,12 @@ message Polygon {
     uint32 a = 1;
     uint32 b = 2;
     uint32 c = 3;
+}
+
+message Position {
+    double x = 1;
+    double y = 2;
+    double z = 3;
 }
 
 message Location {

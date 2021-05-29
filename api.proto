@@ -24,6 +24,8 @@ message Request {
 
 
 message Update {
+    TrackingState state = 1;
+    repeated Position points = 2;
 }
 
 
