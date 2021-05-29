@@ -11,6 +11,6 @@ message TrackRequest {
 
 message TrackResult {
     Camera camera = 1;
-    repeated Position points = 2;
+    repeated Point points = 2;
     TrackingState state = 3;
 }

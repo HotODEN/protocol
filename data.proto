@@ -24,26 +24,28 @@ message Camera {
     Location location = 1;
 }
 
-message MeshUpdate {
-
+message Mesh {
+    repeated Point vertices = 1;
+    repeated Triangle triangles = 2;
 }
 
 message Point {
     uint32 id = 1;
-    Location location = 2;
-    Color color = 3;
+    Vec3 position = 2;
+    Vec3 normal = 3;
+    Color color = 4;
 }
 
-message Polygon {
+message Triangle {
     uint32 a = 1;
     uint32 b = 2;
     uint32 c = 3;
 }
 
-message Position {
-    double x = 1;
-    double y = 2;
-    double z = 3;
+message Vec3 {
+    float x = 1;
+    float y = 2;
+    float z = 3;
 }
 
 message Location {
