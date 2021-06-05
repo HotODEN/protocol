@@ -18,8 +18,8 @@ message Info {
 
 message Request {
     uint64 userId = 1;
-    optional Camera camera = 2;
-    optional PNGFrame frame = 3;
+    Camera camera = 2;
+    PNGFrame frame = 3;
 }
 
 
